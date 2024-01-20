@@ -1,5 +1,5 @@
 {
-  "itemGroup.summoningrituals": "Beschwörungsrituale",
+  "label.summoningrituals.itemGroup": "Beschwörungsrituale",
 
   "block.summoningrituals.altar": "Beschwörungsaltar",
   "block.summoningrituals.indestructible_altar": "Unzerstörbarer Beschwörungsaltar",

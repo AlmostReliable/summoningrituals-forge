@@ -1,5 +1,5 @@
 {
-  "itemGroup.summoningrituals": "Ритуалы призыва",
+  "label.summoningrituals.itemGroup": "Ритуалы призыва",
 
   "block.summoningrituals.altar": "Алтарь призыва",
   "block.summoningrituals.indestructible_altar": "Неразрушимый алтарь призыва",
