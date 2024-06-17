@@ -14,6 +14,7 @@ import net.minecraft.world.item.ItemStack;
 
 import javax.annotation.Nonnull;
 import java.util.ArrayDeque;
+import java.util.ArrayList;
 import java.util.Deque;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -27,8 +28,8 @@ public class AltarInventory implements ItemHandler {
     private final PlatformBlockEntity parent;
     private final VanillaWrapper vanillaInv;
     private final Deque<Tuple<ItemStack, Integer>> insertOrder;
+    private final NonNullList<ItemStack> items;
 
-    private NonNullList<ItemStack> items;
     private ItemStack catalyst;
 
     public AltarInventory(PlatformBlockEntity parent) {
@@ -188,7 +189,10 @@ public class AltarInventory implements ItemHandler {
         }
 
         if (actualRemoved < toRemove) {
-            items = NonNullList.of(ItemStack.EMPTY, itemBackup.toArray(new ItemStack[0]));
+            items.clear();
+            for (int i = 0; i < itemBackup.size(); i++) {
+                items.add(i, itemBackup.get(i));
+            }
             return false;
         }
 
@@ -305,6 +309,11 @@ public class AltarInventory implements ItemHandler {
     }
 
     private List<ItemStack> createItemBackup() {
-        return items.stream().filter(stack -> !stack.isEmpty()).map(ItemStack::copy).collect(Collectors.toList());
+        List<ItemStack> backup = new ArrayList<>();
+        for (var stack : items) {
+            if (stack.isEmpty()) continue;
+            backup.add(stack.copy());
+        }
+        return backup;
     }
 }
