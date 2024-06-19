@@ -5,6 +5,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog],
 and this project adheres to [Semantic Versioning].
 
+## Unreleased
+
+### Added
+- added Russian translation ([#27])
+
+### Fixed
+- fixed invalid language keys for creative tab translations
+- fixed inventory backup shrinking inventory size, should get rid of some rare crashes
+
+<!-- Links -->
+[#27]: https://github.com/AlmostReliable/summoningrituals/pull/27
+
 ## [2.0.7] - 2024-01-13
 
 Initial 1.20.1 port!
