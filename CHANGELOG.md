@@ -5,7 +5,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog],
 and this project adheres to [Semantic Versioning].
 
-## Unreleased
+## [2.0.8] - 2024-06-19
 
 ### Added
 - added Russian translation ([#27])
@@ -29,4 +29,5 @@ Initial 1.20.1 port!
 [semantic versioning]: https://semver.org/spec/v2.0.0.html
 
 <!-- Versions -->
+[2.0.8]: https://github.com/AlmostReliable/summoningrituals/releases/tag/v1.20.1-forge-2.0.8
 [2.0.7]: https://github.com/AlmostReliable/summoningrituals/releases/tag/v1.20.1-forge-2.0.7
